@@ -1437,7 +1437,7 @@ function Flap({ value, label }) {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
       <div style={{
         fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
-        fontSize: 20, fontWeight: 700, color: "#E30613",
+        fontSize: 20, fontWeight: 700, color: "#3D6B8C",
         background: "#FFFFFF", padding: "3px 9px", borderRadius: 2,
         letterSpacing: 0.5, minWidth: 48, textAlign: "center",
         border: "1.5px solid #17181A",
@@ -1451,8 +1451,8 @@ function CategoryChip({ label, sub, active, onClick }) {
   return (
     <button onClick={onClick} style={{
       padding: sub ? "5px 12px 6px" : "6px 12px", borderRadius: 999, fontWeight: 600,
-      border: active ? "1.5px solid #E30613" : "1.5px solid #DCDAD2",
-      background: active ? "#E30613" : "#FFFFFF",
+      border: active ? "1.5px solid #3D6B8C" : "1.5px solid #DCDAD2",
+      background: active ? "#3D6B8C" : "#FFFFFF",
       color: active ? "#FFFFFF" : "#4B4D52",
       whiteSpace: "nowrap", cursor: "pointer", flexShrink: 0,
       transition: "all .12s ease", display: "flex", flexDirection: "column", alignItems: "center", lineHeight: 1.15,
@@ -1643,7 +1643,7 @@ function Flashcards({ words, direction, known, toggleKnown }) {
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
         padding: 16, cursor: "pointer", textAlign: "center", gap: 6,
       }}>
-        <div style={{ fontSize: 9.5, letterSpacing: 1.3, textTransform: "uppercase", color: "#E30613", fontWeight: 700 }}>
+        <div style={{ fontSize: 9.5, letterSpacing: 1.3, textTransform: "uppercase", color: "#3D6B8C", fontWeight: 700 }}>
           {card.cat}
         </div>
         <div style={{ fontSize: 19, fontWeight: 800, color: "#17181A" }}>{front}</div>
@@ -1656,8 +1656,8 @@ function Flashcards({ words, direction, known, toggleKnown }) {
 
       <div style={{ display: "flex", gap: 8, marginTop: 12, width: "100%", maxWidth: 280 }}>
         <button onClick={() => next(false)} style={{
-          flex: 1, padding: "10px 0", borderRadius: 10, border: "1.5px solid #E8B4B4", background: "#FDF1F1",
-          color: "#C22", fontWeight: 700, fontSize: 12.5, display: "flex", alignItems: "center", justifyContent: "center", gap: 5,
+          flex: 1, padding: "10px 0", borderRadius: 10, border: "1.5px solid #C3D7E3", background: "#EAF1F5",
+          color: "#2F5670", fontWeight: 700, fontSize: 12.5, display: "flex", alignItems: "center", justifyContent: "center", gap: 5,
         }}><RotateCcw size={13} /> Nochmal</button>
         <button onClick={() => next(true)} style={{
           flex: 1, padding: "10px 0", borderRadius: 10, border: "none", background: "#2F7D4F",
@@ -1744,7 +1744,7 @@ function TextsTab() {
               <div style={{ fontSize: 11.5, color: "#9A9DA3", marginTop: 1 }}>{t.lines.length} Sätze</div>
             </div>
             <span style={{
-              fontSize: 10.5, fontWeight: 800, color: "#E30613", border: "1.5px solid #E30613",
+              fontSize: 10.5, fontWeight: 800, color: "#3D6B8C", border: "1.5px solid #3D6B8C",
               borderRadius: 6, padding: "2px 7px",
             }}>{t.level}</span>
           </button>
@@ -1757,7 +1757,7 @@ function TextsTab() {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <div style={{ padding: "10px 16px 6px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <button onClick={() => setSelected(null)} style={{ border: "none", background: "none", color: "#E30613", fontWeight: 700, fontSize: 13.5 }}>← Zurück</button>
+        <button onClick={() => setSelected(null)} style={{ border: "none", background: "none", color: "#3D6B8C", fontWeight: 700, fontSize: 13.5 }}>← Zurück</button>
         <button onClick={() => setShowAll(s => !s)} style={{
           border: "1.5px solid #DCDAD2", background: showAll ? "#17181A" : "#fff", color: showAll ? "#fff" : "#4B4D52",
           borderRadius: 8, padding: "5px 10px", fontSize: 12, fontWeight: 700,
@@ -1774,7 +1774,7 @@ function TextsTab() {
           }}>
             <div style={{ fontSize: 14, color: "#17181A", lineHeight: 1.4 }}>{de}</div>
             {(showAll || revealed[i]) && (
-              <div style={{ fontSize: 12.5, color: "#E30613", marginTop: 4, lineHeight: 1.35 }}>{en}</div>
+              <div style={{ fontSize: 12.5, color: "#3D6B8C", marginTop: 4, lineHeight: 1.35 }}>{en}</div>
             )}
           </div>
         ))}
@@ -1848,7 +1848,7 @@ function App() {
       <div style={{ background: "#FFFFFF", borderBottom: "2px solid #17181A", padding: "16px 16px 14px", flexShrink: 0 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
-            <div style={{ fontSize: 10.5, letterSpacing: 2, color: "#E30613", fontWeight: 800, textTransform: "uppercase" }}>Zürich → B1</div>
+            <div style={{ fontSize: 10.5, letterSpacing: 2, color: "#3D6B8C", fontWeight: 800, textTransform: "uppercase" }}>Zürich → B1</div>
             <div style={{ fontSize: 20, fontWeight: 800, color: "#17181A", letterSpacing: -0.3 }}>Deutsch lernen</div>
           </div>
           <div style={{ display: "flex", gap: 10 }}>
@@ -1883,7 +1883,7 @@ function App() {
           return (
             <button key={t.id} onClick={() => setTab(t.id)} style={{
               flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3,
-              border: "none", background: "none", padding: "6px 0", color: active ? "#E30613" : "#9A9DA3",
+              border: "none", background: "none", padding: "6px 0", color: active ? "#3D6B8C" : "#9A9DA3",
             }}>
               <Icon size={20} strokeWidth={active ? 2.4 : 1.9} />
               <span style={{ fontSize: 10.5, fontWeight: active ? 700 : 500 }}>{t.label}</span>
